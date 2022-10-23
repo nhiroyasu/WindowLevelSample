@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,18 +23,22 @@
                     <rect key="frame" x="16" y="0.0" width="490" height="59"/>
                     <subviews>
                         <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PIh-DR-gxz">
-                            <rect key="frame" x="-2" y="20" width="421" height="19"/>
+                            <rect key="frame" x="-2" y="19" width="415" height="21"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="Normal" id="j8r-Dk-kV0">
-                                <font key="font" metaFont="systemBold" size="16"/>
+                                <font key="font" metaFont="systemBold" size="18"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P91-pL-FoK">
-                            <rect key="frame" x="418" y="13" width="79" height="32"/>
-                            <buttonCell key="cell" type="push" title="See" bezelStyle="rounded" image="eye.fill" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IwZ-Rt-Eve">
+                            <rect key="frame" x="412" y="11" width="85" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="z3r-F3-8gb"/>
+                            </constraints>
+                            <buttonCell key="cell" type="push" title="See" bezelStyle="rounded" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IwZ-Rt-Eve">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
+                                <imageReference key="image" image="eye.fill" catalog="system" symbolScale="large"/>
                             </buttonCell>
                             <color key="bezelColor" name="systemCyanColor" catalog="System" colorSpace="catalog"/>
                             <connections>
@@ -67,6 +73,6 @@
         <collectionViewItem nibName="ExecuteSampleCell" id="ip8-RT-hb8" customClass="ExecuteSampleCell" customModule="WindowLevelSample" customModuleProvider="target"/>
     </objects>
     <resources>
-        <image name="eye.fill" catalog="system" width="20" height="13"/>
+        <image name="eye.fill" catalog="system" width="26" height="16"/>
     </resources>
 </document>

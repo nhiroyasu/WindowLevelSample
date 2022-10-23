@@ -24,6 +24,6 @@ class DockWindowLevelExecuter: SampleExecutable {
     }
 
     func clear() {
-        window.performClose(self)
+        window.close()
     }
 }

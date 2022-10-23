@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ExecuteSampleCell" customModule="WindowLevelSample" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="PIh-DR-gxz" id="DL5-Cb-fEq"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="522" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sqk-MH-a2o">
+                    <rect key="frame" x="16" y="0.0" width="490" height="59"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PIh-DR-gxz">
+                            <rect key="frame" x="-2" y="20" width="421" height="19"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Normal" id="j8r-Dk-kV0">
+                                <font key="font" metaFont="systemBold" size="16"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P91-pL-FoK">
+                            <rect key="frame" x="418" y="13" width="79" height="32"/>
+                            <buttonCell key="cell" type="push" title="See" bezelStyle="rounded" image="eye.fill" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IwZ-Rt-Eve">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <color key="bezelColor" name="systemCyanColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="didTapSeeButton:" target="-2" id="ZL8-T5-mf1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Krg-yP-ayn">
+                    <rect key="frame" x="0.0" y="-2" width="522" height="5"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Krg-yP-ayn" secondAttribute="trailing" id="0OQ-aM-vJB"/>
+                <constraint firstItem="Krg-yP-ayn" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="VN0-Sj-QtI"/>
+                <constraint firstItem="Sqk-MH-a2o" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="16" id="X9o-ui-bNN"/>
+                <constraint firstItem="Sqk-MH-a2o" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="XeK-Im-4Oy"/>
+                <constraint firstAttribute="bottom" secondItem="Sqk-MH-a2o" secondAttribute="bottom" id="au5-y8-cV9"/>
+                <constraint firstAttribute="trailing" secondItem="Sqk-MH-a2o" secondAttribute="trailing" constant="16" id="mVf-dr-Xoj"/>
+                <constraint firstAttribute="bottom" secondItem="Krg-yP-ayn" secondAttribute="bottom" id="wBp-5S-Vg3"/>
+            </constraints>
+            <point key="canvasLocation" x="160" y="45.5"/>
+        </customView>
+        <collectionViewItem nibName="ExecuteSampleCell" id="ip8-RT-hb8" customClass="ExecuteSampleCell" customModule="WindowLevelSample" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="eye.fill" catalog="system" width="20" height="13"/>
+    </resources>
+</document>
